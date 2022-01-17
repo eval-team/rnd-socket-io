@@ -16,17 +16,24 @@ function App() {
   }, [setSocket]);
   return (
     <div className="App">
+      
       <header className="app-header">
         React Chat
       </header>
+      <div className='chat-box-container'>
       { socket ? (
         <div className="chat-container">
+          <div className='message-container-text'>
           <Messages socket={socket} />
+          </div>
+          {/* <div style={{display:'flex', justifyContent:"center", alignItems:"center", flex:"1", width:'100%'}} > */}
           <MessageInput socket={socket} />
+          {/* </div> */}
         </div>
       ) : (
         <div>Not Connected</div>
       )}
+      </div>
     </div>
   );
 }
