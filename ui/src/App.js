@@ -16,7 +16,6 @@ function App() {
   }, [setSocket]);
   return (
     <div className="App">
-      
       <header className="app-header">
         React Chat
       </header>
