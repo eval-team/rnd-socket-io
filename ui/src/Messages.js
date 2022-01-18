@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import moment from 'moment';
 import './Message.css';
 
 function Messages({ socket }) {
@@ -43,7 +44,7 @@ function Messages({ socket }) {
           >
             {/* <span className="user">{message.user.name}:</span> */}
             <span className="message">{message.value}</span>
-            <span className="date">{new Date(message.time).toLocaleTimeString()}</span>
+            <span className="date">{moment(new Date(message.time)).fromNow(true)}</span>
           </div>
         ))
       }
